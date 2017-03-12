@@ -4,7 +4,7 @@
  *
  */
 
-/// Sample basic topbar
+/// Sample topbar
 #main-top-bar{
     padding: 0; // Topbar have a default padding
 
@@ -34,7 +34,7 @@
 
     }
 
-    /* Impact every topbar menu (like nested, dropdown, etc..) */
+    /* Impact every topbar menu (like top level, nested, dropdown, etc..) */
     .menu{
         li a{
             // Topbar default item does not enforce any height

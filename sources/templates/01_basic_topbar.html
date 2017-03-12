@@ -1,7 +1,5 @@
 {% extends "_includes/_skeleton.html" %}
 
-{% block head_title %}{{ SITE.name }}{% endblock %}
-
 {% block header_container %}
 <div class="top-bar" id="main-top-bar">
     <div class="top-bar-title">
@@ -21,9 +19,20 @@
 <div class="block">
     <div class="row large">
         <div class="small-12 columns">
-            <h1>Basic Topbar</h1>
+            <h1>{{ page_title }}</h1>
 
-            <p>Un responsive basic topbar with one level item.</p>
+            <div class="callout">
+                <p>A basic responsive topbar with one level item.</p>
+
+                <p>Topbar we knowed from previous Foundation versions, does not exists anymore. Now we are talking about menu components and topbar is just a behavior for menus.</p>
+
+                <p>Now Topbar component itself is only about to manage title part, left and right menus. Everything else like responsive toggle, sticky, dropdown, etc.. has been splitted into their own component.</p>
+
+                <p>You must combine them to achieve the same look and feel than in Foundation5.</p>
+
+                <p>Also, there is not so much settings to define to adjust topbar elements look. Each menu components have some settings but since they are global components which you may use out of a topbar, you should not set them only for the topbar look.</p>
+                <p>Finally, it require a little bit of custom CSS to have a nicer topbar look. See <code>sources/sass/scss/components/_headers.scss</code> from repository.</p>
+            </div>
 
             {% for count in range(1, 7) %}
             <h2 id="item-{{ count }}">Item {{ count }}</h2>

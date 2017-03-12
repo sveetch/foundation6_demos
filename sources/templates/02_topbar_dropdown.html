@@ -1,7 +1,5 @@
 {% extends "_includes/_skeleton.html" %}
 
-{% block head_title %}{{ SITE.name }}{% endblock %}
-
 {% block header_container %}
 <div class="top-bar" id="main-top-bar">
     <div class="top-bar-title">
@@ -27,9 +25,11 @@
 <div class="block">
     <div class="row large">
         <div class="small-12 columns">
-            <h1>Topbar with dropdown</h1>
+            <h1>{{ page_title }}</h1>
 
             <p>A basic unresponsive topbar with dropdown entries.</p>
+
+            <p>Dropdown menu is about to hide and reveal sub menu when their parent is hovered.</p>
 
             {% for count in range(1, 7) %}
             <h2 id="item-{{ count }}">Item {{ count }}</h2>

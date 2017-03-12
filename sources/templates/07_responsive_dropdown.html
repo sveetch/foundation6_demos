@@ -1,7 +1,5 @@
 {% extends "_includes/_skeleton.html" %}
 
-{% block head_title %}{{ SITE.name }}{% endblock %}
-
 {% block header_container %}
 <div class="top-bar" id="main-top-bar">
     <div class="top-bar-title">
@@ -12,10 +10,16 @@
     </div>
     <div id="responsive-menu">
         <div class="top-bar-left">
-            <ul class="vertical large-horizontal menu">
-                {% for count in range(1, 7) %}
-                <li><a href="#item-{{ count }}">Item {{ count }}</a></li>
-                {% endfor %}
+            <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
+                <li><a href="#item-1">Not a dropdown</a></li>
+                <li>
+                    <a href="#">Is a Dropdown</a>
+                    <ul class="menu">
+                        {% for count in range(1, 7) %}
+                        <li><a href="#item-{{ count }}">Item {{ count }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
@@ -26,9 +30,13 @@
 <div class="block">
     <div class="row large">
         <div class="small-12 columns">
-            <h1>Responsive Topbar</h1>
+            <h1>{{ page_title }}</h1>
 
-            <p>Basic responsive topbar with one level item.</p>
+            <div class="callout">
+                <p>A responsive topbar with dropdown entries.</p>
+
+                <p>We use Menu drilldown to toggle dropdown on responsive switch.</p>
+            </div>
 
             {% for count in range(1, 7) %}
             <h2 id="item-{{ count }}">Item {{ count }}</h2>

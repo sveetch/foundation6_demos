@@ -47,7 +47,7 @@ class PageSitemap(object):
             for leaf_name, leaf_content in branch.items():
                 datas = leaf_content['data']
                 pages.append(self.view(
-                    title=leaf_name,
+                    title=datas['title'],
                     template_name=datas['link'],
                     destination=datas['link'],
                     sitemap=self.sitemap,
@@ -72,6 +72,7 @@ def tree_from_directory_structure(scanned_path, base_path=None):
     tree = Tree()
     tree.create_node("root", "root", data={
         'id': "root",
+        'title': "Root",
         'link': 'index.html',
         'is_dir': True,
     })
@@ -98,6 +99,7 @@ def tree_from_directory_structure(scanned_path, base_path=None):
                 # Add directory node
                 tree.create_node(dir_name.replace('_', ' '), current_dir, parent=parent, data={
                     'id': current_dir,
+                    'title': format_title(dir_name),
                     'link': os.path.join(relative_dir, 'index.html'),
                     'is_dir': True,
                 })
@@ -124,10 +126,17 @@ def tree_from_directory_structure(scanned_path, base_path=None):
                     # Add file node to current directory node
                     tree.create_node(title, tag, parent=current_dir, data={
                         'id': tag,
+                        'title': format_title(head),
                         'link': filepath,
                         'is_dir': False,
                     })
 
-            #print
-
     return tree
+
+def format_title(name):
+    title = name.replace('_', ' ')
+    # Remove digit prefix
+    if title.split(" ")[0].isdigit():
+        title = " ".join(title.split(" ")[1:])
+
+    return title.capitalize()
