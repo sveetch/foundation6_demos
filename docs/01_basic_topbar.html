@@ -3,7 +3,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <title>Foundation6 demos</title>
+    <title>Basic topbar - Foundation6 demos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <meta name="robots" content="index,follow,all">
@@ -45,40 +45,51 @@
 <div class="block">
     <div class="row large">
         <div class="small-12 columns">
-            <h1>Basic Topbar</h1>
+            <h1>Basic topbar</h1>
 
-            <p>Un responsive basic topbar with one level item.</p>
+            <div class="callout">
+                <p>A basic responsive topbar with one level item.</p>
+
+                <p>Topbar we knowed from previous Foundation versions, does not exists anymore. Now we are talking about menu components and topbar is just a behavior for menus.</p>
+
+                <p>Now Topbar component itself is only about to manage title part, left and right menus. Everything else like responsive toggle, sticky, dropdown, etc.. has been splitted into their own component.</p>
+
+                <p>You must combine them to achieve the same look and feel than in Foundation5.</p>
+
+                <p>Also, there is not so much settings to define to adjust topbar elements look. Each menu components have some settings but since they are global components which you may use out of a topbar, you should not set them only for the topbar look.</p>
+                <p>Finally, it require a little bit of custom CSS to have a nicer topbar look. See <code>sources/sass/scss/components/_headers.scss</code> from repository.</p>
+            </div>
 
             
             <h2 id="item-1">Item 1</h2>
-            <p>Conubia blandit fringilla mi luctus, pulvinar class ut conubia volutpat massa, cum nam massa imperdiet bibendum proin est morbi, turpis. Interdum turpis pede leo massa, hendrerit fringilla nisi.</p>
-<p>Potenti vulputate enim natoque orci libero, mus nunc condimentum suscipit per aptent, mollis accumsan justo ullamcorper pulvinar nam, elit urna potenti. Facilisis consectetuer curae non montes blandit porta, venenatis.</p>
-<p>Commodo et augue cubilia at, rutrum penatibus praesent dictum hac pharetra, nascetur imperdiet tristique in est. Maecenas primis pulvinar tincidunt vel, nascetur quisque elementum scelerisque, faucibus ipsum.</p>
+            <p>Potenti habitasse laoreet nisi ridiculus pretium augue dapibus penatibus, nulla enim hymenaeos dapibus aenean, eleifend tellus at facilisis porta quis, pulvinar magna consectetuer. Nisi netus.</p>
+<p>Potenti mollis purus erat per tincidunt inceptos, dapibus vel nonummy accumsan pretium parturient, nostra pellentesque maecenas at faucibus porttitor. Luctus elementum eleifend primis sollicitudin.</p>
+<p>Porta lacinia congue sapien ac, duis sit eu sociis conubia mattis, fames senectus porttitor non porttitor, pellentesque senectus dictumst. Scelerisque semper magna felis leo fames, sodales sapien.</p>
             
             <h2 id="item-2">Item 2</h2>
-            <p>Sociosqu dui quisque nascetur neque senectus, rhoncus ipsum semper lacus sociis augue, cum aliquam fermentum consequat, libero purus mi. Tincidunt at orci facilisis nunc, eleifend placerat luctus.</p>
-<p>Metus litora eget ligula non sociosqu velit conubia, mauris amet auctor suscipit accumsan, hac placerat cursus nascetur, ullamcorper nullam. Cum per tortor potenti vel.</p>
-<p>Porta sed quam nonummy nostra tortor ut, fermentum integer vel imperdiet, mattis quam magnis eros neque, augue felis fringilla varius, sociis lobortis nam. Mauris mi felis scelerisque.</p>
+            <p>Tortor habitant vehicula orci habitant, nisl purus quisque venenatis sollicitudin rhoncus, senectus vel netus posuere purus velit, porttitor per etiam. Dolor sem odio posuere gravida adipiscing.</p>
+<p>Eget libero pede mus ipsum, luctus ac dis ultricies quam a, imperdiet nonummy suscipit quam amet, iaculis et metus ante mauris molestie, natoque sed et.</p>
+<p>Nascetur sociis nam in proin, lobortis mi rhoncus taciti, porttitor egestas netus velit penatibus, neque gravida nec natoque posuere. Sit consequat quam in neque, tempus etiam eleifend.</p>
             
             <h2 id="item-3">Item 3</h2>
-            <p>Ac enim blandit consequat penatibus, vestibulum posuere lacinia augue turpis, vulputate hendrerit litora sociosqu rhoncus vestibulum, quisque suspendisse ante ad eleifend.</p>
-<p>Maecenas natoque conubia hendrerit ad imperdiet per, congue iaculis a tempor per scelerisque ut, porta sollicitudin velit per, nibh praesent. Fames commodo gravida morbi quis.</p>
-<p>Lorem non cubilia dictumst commodo pulvinar risus, eleifend et hymenaeos arcu luctus, mollis morbi ante nisi conubia, dictumst proin. Habitant sollicitudin.</p>
+            <p>Suscipit platea mus cubilia malesuada facilisi fusce, convallis etiam cubilia penatibus massa, id ut ante phasellus sit. Dignissim lacus elit orci.</p>
+<p>Convallis congue sit risus quisque turpis quisque, class vestibulum nascetur dictumst potenti, tincidunt curabitur phasellus hendrerit, urna placerat porttitor nisl. Natoque senectus.</p>
+<p>Egestas magnis quam arcu rutrum id, et congue facilisis bibendum nec natoque adipiscing porttitor, amet purus torquent pretium,. Platea ultrices magnis.</p>
             
             <h2 id="item-4">Item 4</h2>
-            <p>Porttitor massa pellentesque pede bibendum hendrerit nisl consectetuer, convallis facilisis posuere dui purus ante, posuere magna sodales in cubilia, varius consectetuer. Nulla ipsum orci tortor potenti sodales, posuere.</p>
-<p>Volutpat bibendum mollis torquent justo erat, faucibus leo tempor mollis ligula nibh, sociosqu commodo mattis ad maecenas donec, sit leo. Primis sodales accumsan proin, aliquam imperdiet.</p>
-<p>Scelerisque sodales sollicitudin ligula primis lobortis, tortor consectetuer felis ultrices tempor facilisis fames, integer ante nam vivamus vestibulum natoque, lobortis neque. Cum laoreet.</p>
+            <p>Euismod mi nullam mi netus laoreet, commodo sociosqu ridiculus nibh nulla non, a inceptos sem sociosqu dictumst ut, proin sodales vitae felis eget sociis, viverra. Mi vestibulum curabitur.</p>
+<p>Tincidunt suscipit bibendum sed mus potenti lacus, inceptos commodo class mus nibh, curabitur sociis porta consequat sociis, torquent congue nonummy lacus dignissim, luctus. Cursus phasellus tellus conubia nisi rhoncus.</p>
+<p>Sapien primis suspendisse facilisi congue fames, diam orci ornare class fames, phasellus integer diam suscipit sem, aenean libero. Eros penatibus augue purus, sem hendrerit.</p>
             
             <h2 id="item-5">Item 5</h2>
-            <p>Lacus ligula vitae primis eleifend duis ipsum vestibulum tortor, fusce mauris ante suspendisse turpis tempus, sociis praesent sagittis augue enim porttitor. Libero fusce vulputate mattis vivamus curae sodales.</p>
-<p>Interdum cubilia id molestie torquent sociis, purus condimentum dictumst sagittis curabitur facilisi, facilisis nonummy tellus proin, hac aenean quam. Fringilla arcu.</p>
-<p>Enim convallis vulputate gravida ligula quis semper, sociosqu facilisi conubia porttitor, orci sodales curabitur laoreet nonummy, curabitur placerat etiam pretium cursus aliquam, ornare eget. Diam.</p>
+            <p>Vehicula lorem phasellus magna porttitor dictum, nulla et ut mollis cursus pellentesque, vivamus neque penatibus mus cras. Maecenas lobortis justo nulla.</p>
+<p>Dolor pulvinar neque sed hymenaeos dui pellentesque, sociosqu ad augue litora lobortis, ac ullamcorper pede etiam bibendum nascetur, lacinia metus class. Felis pharetra mi dolor sodales.</p>
+<p>Erat dolor mus curabitur dis, primis tellus bibendum iaculis massa, facilisis integer ullamcorper rutrum magnis massa habitant, hendrerit nostra porta. Ridiculus proin.</p>
             
             <h2 id="item-6">Item 6</h2>
-            <p>Interdum sed feugiat eleifend conubia ac, gravida dignissim mauris mollis scelerisque, sollicitudin egestas vivamus sit massa, leo lacinia conubia posuere, quisque placerat facilisis amet porta, conubia. Id nunc.</p>
-<p>Purus varius primis erat litora bibendum interdum ante auctor, hymenaeos nunc nonummy bibendum nullam consectetuer, lorem pharetra placerat dictum aliquet. Vel ornare facilisi ultricies.</p>
-<p>Lorem aptent amet et lacus vestibulum, taciti rhoncus consectetuer cubilia, tempus leo facilisi phasellus vel nascetur, dis ipsum ante. Commodo inceptos facilisis pulvinar interdum est.</p>
+            <p>Nibh diam varius natoque nunc, ultrices maecenas molestie duis, adipiscing ultrices suspendisse consectetuer iaculis nullam, curae ante dictum nec, dictum mauris vitae.</p>
+<p>Risus nascetur per sit ut, nam pellentesque eros platea mollis per, nascetur fusce sapien mollis pellentesque, fusce in nam. Massa mi suspendisse.</p>
+<p>Condimentum maecenas sagittis quisque eleifend, suspendisse urna natoque dolor vitae, venenatis quisque eu nibh netus augue, amet volutpat sit eu. Ipsum nibh vivamus justo pellentesque, purus.</p>
             
         </div>
     </div>
