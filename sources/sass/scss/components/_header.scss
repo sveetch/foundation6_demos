@@ -1,0 +1,66 @@
+/*
+ *
+ * Header styles
+ *
+ */
+
+/// Sample basic topbar
+#main-top-bar{
+    padding: 0; // Topbar have a default padding
+
+    // Default topbar title are a little bit too rude
+    .top-bar-title{
+        padding: 0;
+        margin-right: 2rem; // Little space separator with left topbar
+
+        .toggle-topbar{
+            position: relative;
+            top: -0.1rem;
+            left: 0.5rem;
+        }
+
+        .brand{
+            font-size: 1.5rem;
+            font-weight: $font-weight-bold;
+            line-height: rem-calc(60px);
+            color: $white;
+            display: inline-block;
+            margin-left: 1rem;
+
+            a{
+                color: $white;
+            }
+        }
+
+    }
+
+    /* Impact every topbar menu (like nested, dropdown, etc..) */
+    .menu{
+        li a{
+            // Topbar default item does not enforce any height
+            padding-top: 0;
+            padding-bottom: 0;
+            line-height: rem-calc(60px);
+
+            /* No setting for default topbar item link behaviors, there is one
+             * for menu but it change every menu, not only topbar
+             */
+            color: $white;
+            &.active{
+                color: $white;
+                background-color: map-get($foundation-palette, 'primary');
+            }
+            &:not(.active):hover{
+                background-color: lighten($topbar-background, 5%);
+            }
+        }
+    }
+
+    ///
+    /// For Sticky mode
+    ///
+    &.sticky{
+        // Default sticky does not enforce any width
+        width: 100%;
+    }
+}

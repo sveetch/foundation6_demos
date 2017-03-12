@@ -1,0 +1,19 @@
+{% extends "_includes/_skeleton.html" %}
+
+{% block head_title %}{{ SITE.name }}{% endblock %}
+
+{% block header_container %}{% endblock %}
+
+{% block base_content %}
+<div class="block">
+    <div class="row large">
+        <div class="small-12 columns">
+            <h1>Sample list <small>for {{ SITE.name }}</small></h1>
+
+            <ul class="menu vertical">
+                {% include '_includes/_menu.html' %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

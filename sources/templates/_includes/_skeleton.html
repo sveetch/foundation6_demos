@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="{% block html_attr_alt %}{% endblock %}no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="{% block html_attr %}{% endblock %}no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>{% block head_title %}{{ page_title|capitalize }} - {{ SITE.name }}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    {% block head_content -%}
+        {% block head_metas -%}
+            <meta name="robots" content="index,follow,all">
+        {%- endblock %}
+
+        {% block base_css -%}
+            {%- assets "main_f6_css" -%}<link rel="stylesheet" href="{{ page_relative_position }}{{ ASSET_URL }}">{%- endassets -%}
+        {%- endblock %}
+        {% block more_css %}{% endblock %}
+        {% block base_js -%}
+            {%- assets "modernizr_f6_js" -%}<script src="{{ page_relative_position }}{{ ASSET_URL }}"></script>{%- endassets -%}
+        {%- endblock %}
+        {% block head_more_links %}{% endblock %}
+    {%- endblock head_content %}
+</head>
+
+<body{% block body_attr %}{% endblock %}>
+    {% block header_container %}{% endblock %}
+
+    {% block content_container %}<div id="body_content"{% block content_container_attrs %}{% endblock %}>
+        {% block base_content %}{% endblock %}
+    </div>{% endblock %}
+
+    {% block footer_container %}{% endblock %}
+
+    {% block more_js -%}
+        {%- assets "main_f6_js" -%}<script src="{{ page_relative_position }}{{ ASSET_URL }}"></script>{%- endassets %}
+    {%- endblock %}
+</body>
+</html>

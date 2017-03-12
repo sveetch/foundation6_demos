@@ -1,0 +1,40 @@
+{% extends "_includes/_skeleton.html" %}
+
+{% block head_title %}{{ SITE.name }}{% endblock %}
+
+{% block header_container %}
+<div class="top-bar" id="main-top-bar">
+    <div class="top-bar-title">
+        <span class="toggle-topbar" data-responsive-toggle="responsive-menu" data-hide-for="large">
+            <button class="menu-icon" type="button" data-toggle></button>
+        </span>
+        <p class="brand"><a href="//{{ SITE.domain }}">{{ SITE.name }}</a></p>
+    </div>
+    <div id="responsive-menu">
+        <div class="top-bar-left">
+            <ul class="vertical large-horizontal menu">
+                {% for count in range(1, 7) %}
+                <li><a href="#item-{{ count }}">Item {{ count }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block base_content %}
+<div class="block">
+    <div class="row large">
+        <div class="small-12 columns">
+            <h1>Responsive Topbar</h1>
+
+            <p>Basic responsive topbar with one level item.</p>
+
+            {% for count in range(1, 7) %}
+            <h2 id="item-{{ count }}">Item {{ count }}</h2>
+            {{ lipsum(n=3, html=True, min=20, max=30) }}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
