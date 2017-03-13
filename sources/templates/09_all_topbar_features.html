@@ -1,0 +1,55 @@
+{% extends "_includes/_skeleton.html" %}
+
+{% block header_container %}
+<div data-sticky-container>
+    <div class="top-bar" data-sticky data-options="marginTop:0;" id="main-top-bar">
+        <div class="top-bar-title">
+            <span class="toggle-topbar" data-responsive-toggle="responsive-menu" data-hide-for="large">
+                <button class="menu-icon" type="button" data-toggle></button>
+            </span>
+            <p class="brand"><a href="//{{ SITE.domain }}">{{ SITE.name }}</a></p>
+        </div>
+        <div id="responsive-menu">
+            <div class="top-bar-left">
+                <ul class="vertical large-horizontal menu" data-magellan>
+                    {% for count in range(1, 7) %}
+                    <li><a href="#item-{{ count }}">Item {{ count }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <ul class="menu" data-responsive-menu="drilldown medium-dropdown" data-auto-height="true" data-animate-height="true">
+                    <li><a href="#item-1">Not a dropdown</a></li>
+                    <li>
+                        <a href="#">Is a Dropdown</a>
+                        <ul class="menu">
+                            {% for count in range(1, 7) %}
+                            <li><a href="#item-{{ count }}">Item {{ count }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block base_content %}
+<div class="block">
+    <div class="row large">
+        <div class="small-12 columns">
+            <h1>{{ page_title }}</h1>
+
+            <div class="callout">
+                <p>This demo combine every previously demonstrated features excepted the 'contain to grid'.</p>
+            </div>
+
+            {% for count in range(1, 7) %}
+            <h2 id="item-{{ count }}" data-magellan-target="item-{{ count }}">Item {{ count }}</h2>
+            {{ lipsum(n=5, html=True, min=20, max=30) }}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
